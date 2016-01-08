@@ -10,15 +10,14 @@ import collections
 url = 'https://gist.githubusercontent.com/ilanasegall/6dd2040657eb924171f9/raw/35ae4246ec93fc8b743835c76c8807a44460e81a/sample.csv'
 response = urllib.urlopen(url)
 reader = csv.reader(response)
-headers = reader.next()
-columns = {}
-for h in headers:
-	columns[h] = []
+data = list(reader)
+parsed_data = {}
 
-for row in reader:
-	for h, v in zip(headers, row):
-		columns[h].append(v)
+for line in data[1:]:
 
-print(collections.Counter(columns['os']).most_common(1))
+	if parsed_data.has_key(line[1]):
+		parsed_data[line[1]] += int(line[2])
+	else:
+		parsed_data[line[1]] = int(line[2])
 
-
+print(collections.Counter(parsed_data).most_common(1))
