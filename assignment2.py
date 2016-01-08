@@ -1,3 +1,5 @@
+#get two numbers and print them
+
 n1 = input('Input number 1\n')
 n2 = input('Input number 2\n')
 
