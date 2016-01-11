@@ -35,10 +35,10 @@ while i < index:
 	cmdargs.append(int(sys.argv[i]))
 	i = i+1
 
-print ("Sum of numbers:" + str(sumargs(cmdargs)))
+print "Sum of numbers:" + str(sumargs(cmdargs))
 
-print("Product of the numbers:" + str((multiplyargs(cmdargs))))
+print "Product of the numbers:" + str((multiplyargs(cmdargs)))
 
-print ("First number:" + firstnumber(cmdargs))
+print  "First number:" + firstnumber(cmdargs)
 
-print("Last number:" + lastnumber(cmdargs))
+print "Last number:" + lastnumber(cmdargs)

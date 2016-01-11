@@ -8,4 +8,4 @@ n2 = int(n2)
     
 total = n1 + n2
 
-print('The sum is ' + str(total))
+print 'The sum is ' + str(total)

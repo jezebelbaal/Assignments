@@ -17,4 +17,4 @@ while i < indice:
 	total = total + int(cmdargs[i])
 	i = i+1
 
-print (total)
+print total
